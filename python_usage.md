@@ -3,7 +3,7 @@ This guide is not (exactly) a guide, since every data pipeline will have differe
 Take all the instructions here-in with a critical mind. If a certain python template does not
 fit your needs, then please signal this to the developers and/or adapt the code to your use-case.
 
-All entrypoints listed below can be found in the submodule `project_name.gcp` (meaning `project_name/gcp.py` file).
+All entrypoints listed below can be found in the submodule `cnd_template_test_vv.gcp` (meaning `cnd_template_test_vv/gcp.py` file).
 
 ## HTTP triggered Cloud Function
 For HTTP triggered cloud functions, you will be using the entrypoint function `main_http_event`.
@@ -11,7 +11,7 @@ For HTTP triggered cloud functions, you will be using the entrypoint function `m
 Since this entrypoint is mainly used for manual triggers, it assumes that the processing function `refresh_data` takes no arguments.
 Please add any needed arguments to the `refresh_data` function and implement your functionality therein.
 
-The `refresh_data` function lives in the submodule `project_name.base`.
+The `refresh_data` function lives in the submodule `cnd_template_test_vv.base`.
 
 ## Scheduler triggered Cloud Function
 
@@ -30,7 +30,7 @@ For example, in the case where your PubSub message looks like this:
 }
 ```
 
-Then your `refresh_data` declaration in `project_name.base` should look like this:
+Then your `refresh_data` declaration in `cnd_template_test_vv.base` should look like this:
 ```python
 def refresh_data(target_bq_table=None, source_gcs_bucket=None):
     if target_bq_table is None:
@@ -49,19 +49,19 @@ The function `main_bigquery_event` is already populated with code that executes 
 Usually you want to execute an SQL statement as a result of a table being updated.
 
 To that effect, you should take these two steps:
-1. Declare your SQL statement in a file with the `.sql` extension. Save it under `project_name/SQL/sql_scripts`.
-2. Update the file `project_name/SQL/table_script_lookup.json` and fill it with a similar content to:
+1. Declare your SQL statement in a file with the `.sql` extension. Save it under `cnd_template_test_vv/SQL/sql_scripts`.
+2. Update the file `cnd_template_test_vv/SQL/table_script_lookup.json` and fill it with a similar content to:
 ```json
 {
   "<your_table_id>": ["my_script_name.sql"]
 }
 ```
 
- **Note** Only if you save yours scripts in `./project_name/SQL/sql_scripts` can you declare them without the full path.
+ **Note** Only if you save yours scripts in `./cnd_template_test_vv/SQL/sql_scripts` can you declare them without the full path.
  Otherwise your use the full path in the JSON config above:
  ````json
 {
-  "<your_table_id>": ["./project_name/SQL/sql_scripts/<my_script_name>.sql"]
+  "<your_table_id>": ["./cnd_template_test_vv/SQL/sql_scripts/<my_script_name>.sql"]
 }
 ````
 

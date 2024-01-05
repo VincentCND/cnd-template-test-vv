@@ -121,5 +121,5 @@ variable "alert_on_failure" {
 variable "source_folder_relative_path" {
   description = "relative path to cloud function code"
   type        = string
-  default = "../project_name/data_quality"
+  default = "../cnd_template_test_vv/data_quality"
 }

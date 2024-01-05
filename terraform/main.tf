@@ -6,7 +6,7 @@
 #   source                = "./modules/gcs_folder_sync"
 #   name                  = "${var.application_name}-bqexecutor-sync"
 #   gcs_bucket_file_path  = ""
-#   gcs_local_source_path = "../project_name/SQL/sql_scripts"
+#   gcs_local_source_path = "../cnd_template_test_vv/SQL/sql_scripts"
 # }
 
 # module "workflows_cf_main_trigger" {

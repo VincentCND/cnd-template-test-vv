@@ -2,7 +2,7 @@ module "gcs_folder_sync" {
   source                = "./modules/gcs_folder_sync"
   name                  = "${var.application_name}-bqexecutor-sync-${terraform.workspace}"
   gcs_bucket_file_path  = ""
-  gcs_local_source_path = "../project_name/SQL/sql_scripts"
+  gcs_local_source_path = "../cnd_template_test_vv/SQL/sql_scripts"
 }
 
 module "cf_http_trigger_bq_processing" {

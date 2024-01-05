@@ -10,13 +10,13 @@ module "bigquery_some_dataset" {
       table_id = "some_table"
       friendly_name = "Some Table"
       description = "Some Table"
-      schema = file("${path.module}/../project_name/schemas/some_table.json")
+      schema = file("${path.module}/../cnd_template_test_vv/schemas/some_table.json")
     },
     {
       table_id = "some_other_table"
       friendly_name = "Some Other Table"
       description = "Some YET again Table"
-      schema = file("${path.module}/../project_name/schemas/some_other_table.json")
+      schema = file("${path.module}/../cnd_template_test_vv/schemas/some_other_table.json")
     },
   ]
 }

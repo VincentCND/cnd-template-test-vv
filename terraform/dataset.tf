@@ -18,5 +18,5 @@
 
 #   clustering = ["brand"] # Up to 4
 
-#   schema = file("${path.module}/../project_name/schemas/my_table_schema.json")
+#   schema = file("${path.module}/../cnd_template_test_vv/schemas/my_table_schema.json")
 # }

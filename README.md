@@ -208,7 +208,7 @@ As a general rule, please not that we try to incorporate as much as possible in 
 ## 6.2 Python code
 To start development, you will have to understand which service in Google Cloud is your code
 going to be deployed. To see how you can start coding your entry points, check the relevant folders:
-* For Cloud Functions, please the following entrypoints in `project_name/gcp.py`
+* For Cloud Functions, please the following entrypoints in `cnd_template_test_vv/gcp.py`
   * `main_cloud_event` meant to be used for file events on Google Cloud Storage.
   * `main_http_event` meant to be used for http triggers
   * `main_pubsub` meant to be used for Pub/Sub triggers

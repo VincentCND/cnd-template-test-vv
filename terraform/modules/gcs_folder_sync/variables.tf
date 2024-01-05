@@ -7,7 +7,7 @@ variable "name" {
 variable "gcs_local_source_path" {
   description = "The local path (without opening / ending slash) to the directory that needs to be synced, relative to the terraform/main.tf file location"
   type        = string
-  default     = "../project_name/dags_folder"
+  default     = "../cnd_template_test_vv/dags_folder"
 }
 
 variable "gcs_bucket_file_path" {

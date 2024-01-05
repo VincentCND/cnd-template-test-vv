@@ -1,2 +1,2 @@
-application_name = "project-name"
+application_name = "cnd-template-test-vv"
 project          = "changeme"

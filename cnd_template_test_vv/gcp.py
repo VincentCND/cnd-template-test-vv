@@ -2,7 +2,7 @@ import logging
 
 import functions_framework
 
-from project_name.base import export_bucket_file_to_bq, refresh_data
+from cnd_template_test_vv.base import export_bucket_file_to_bq, refresh_data
 
 
 @functions_framework.cloud_event
